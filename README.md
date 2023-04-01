@@ -1,4 +1,10 @@
-# FavouriteSongToLullaby
+# Favourite Song To Lullaby (Angular Front End)
+
+## About
+
+- Generate a lullaby from a song title and artist using OpenAI's API.
+- Use in conjunction with the API [here](https://github.com/jonesjacklewis/OpenAiExpressLullaby)
+- In the `get-lyrics` service - you may need to change the hostname.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 

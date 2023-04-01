@@ -1,0 +1,24 @@
+<h1>Custom Lullaby by Favourite Song</h1>
+
+<label for="songTitle">Song Title</label>
+<input type="text" name="songTitle" id="songTitle" [(ngModel)]="songTitle"> <br>
+
+<hr>
+
+<label for="songArtist">Song Artist</label>
+<input type="text" name="songArtist" id="songArtist" [(ngModel)]="songArtist"> <br>
+
+<hr>
+
+<button [disabled]="songTitle.trim().length == 0 || songArtist.trim().length == 0 || buttonDisabled" (click)="customLullaby()">Generate</button> <br>
+
+<hr>
+
+<div class="lyrics">
+    <mat-spinner *ngIf="buttonDisabled"></mat-spinner>
+    <div *ngFor="let lyric of lyricsToOutput">
+        <p style="font-weight: bold;" class="lyric" *ngIf="lyric.isHeading">{{lyric.lyric}}</p>
+        <p class="lyric" *ngIf="!lyric.isHeading">{{lyric.lyric}}</p>
+    </div>
+    
+</div>
